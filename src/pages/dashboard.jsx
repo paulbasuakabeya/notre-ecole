@@ -54,7 +54,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchThings = async () => {
       try {
-        const response = await axios.get("https://backende-murex.vercel.app/api/$1", {
+        const response = await axios.get("https://backende-murex.vercel.app/api/stuff", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setThings(response.data);
@@ -69,7 +69,7 @@ const Dashboard = () => {
   // Fonction de suppression http://localhost:3000/api/stuff/${id}
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://backende-murex.vercel.app/api/$1/${id}`, {
+      await axios.delete(`https://backende-murex.vercel.app/api/stuff/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setThings(things.filter((thing) => thing._id !== id));

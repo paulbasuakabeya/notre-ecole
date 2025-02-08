@@ -16,7 +16,7 @@ const CreateThing = () => {
     formData.append("image", image);
 
     try {
-      await axios.post("https://backende-murex.vercel.app/api/$1", formData, {
+      await axios.post("https://backende-murex.vercel.app/api/stuff", formData, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
       navigate("/dashboard");
