@@ -129,7 +129,7 @@ const EditThing = () => {
       // await axios.put(`http://localhost:3y000/api/stuff/${id}`, formData, {
       //   headers: { Authorization: `Bearer ${token}`, "Content-Type": "multipart/form-data" },
       // });
-      await axios.put(`http://localhost:3000/api/stuff/${id}`, formData, {
+      await axios.put(`https://backende-murex.vercel.app/api/$1/${id}`, formData, {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "multipart/form-data",

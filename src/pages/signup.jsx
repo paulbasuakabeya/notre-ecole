@@ -10,8 +10,8 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3000/api/auth/signup", { email, password });
-      navigate("/login"); // Redirection vers la page de connexion
+      await axios.post("https://backende-murex.vercel.app/api/$1", { email, password });
+      navigate("/login"); // Redirection vers la page de connexion http://localhost:3000/api/auth/signup
     } catch (error) {
       console.error("Erreur lors de l'inscription", error);
     }

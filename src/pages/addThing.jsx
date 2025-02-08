@@ -59,7 +59,7 @@ const AddThing = () => {
     formData.append("image", image);
 
     try {
-      await axios.post("http://localhost:3000/api/stuff", formData, {
+      await axios.post("https://backende-murex.vercel.app/api/$1", formData, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
       navigate("/dashboard");
