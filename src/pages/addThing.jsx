@@ -4,47 +4,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const AddThing = () => {
-  // const [title, setTitle] = useState("");
-  // const [description, setDescription] = useState("");
-  // const [price, setPrice] = useState("");
-  // const [image, setImage] = useState(null);
-  // const navigate = useNavigate();
-  // const token = localStorage.getItem("token");
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   const formData = new FormData();
-  //   formData.append("title", title);
-  //   formData.append("description", description);
-  //   formData.append("price", price);
-  //   formData.append("image", image);
-
-  //   try {
-    
-  //     await axios.post("http://localhost:3000/api/stuff", formData, {
-  //       headers: {
-  //         Authorization: `Bearer ${token}`,
-  //         "Content-Type": "multipart/form-data",
-  //       },
-  //     });
-  //     navigate("/dashboard"); // Redirection après ajout
-  //   } catch (error) {
-  //     console.error("Erreur lors de l'ajout de l'objet", error);
-  //   }
-  // };
-
-  // return (
-  //   <div className="p-6">
-  //     <h1 className="text-2xl font-bold mb-4">Ajouter un objet</h1>
-  //     <form onSubmit={handleSubmit} className="space-y-4">
-  //       <input type="text" placeholder="Titre" className="input" value={title} onChange={(e) => setTitle(e.target.value)} required />
-  //       <textarea placeholder="Description" className="input" value={description} onChange={(e) => setDescription(e.target.value)} required />
-  //       <input type="number" placeholder="Prix" className="input" value={price} onChange={(e) => setPrice(e.target.value)} required />
-  //       <input type="file" className="input" onChange={(e) => setImage(e.target.files[0])} required />
-  //       <button type="submit" className="btn">Ajouter</button>
-  //     </form>
-  //   </div>
-  // );
 
   const navigate = useNavigate();
   const [title, setTitle] = useState("");
