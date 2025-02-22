@@ -1,53 +1,9 @@
-
-// import React, { useEffect, useState } from "react";
-// import axios from "axios";
-
-// const Dashboard = () => {
-//   const [things, setThings] = useState([]);
-
-//   useEffect(() => {
-//     axios.get("http://localhost:3000/api/stuff")
-//       .then((response) => {
-//         setThings(response.data);
-//       })
-//       .catch((error) => console.error("Erreur lors du chargement", error));
-//   }, []);
-
-//   return (
-//     <div>
-//       <h1 className="text-2xl font-bold">Liste des objets</h1>
-//       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-//         {things.map((thing) => (
-//           <div key={thing._id} className="border p-4 rounded shadow">
-//             <img src={thing.imageUrl} alt={thing.title} className="w-full h-48 object-cover rounded" />
-//             <h2 className="text-xl font-bold">{thing.title}</h2>
-//             <p>{thing.description}</p>
-//             <p className="text-lg font-semibold">{thing.price} €</p>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Dashboard;
-
-
-
 import React, { useEffect, useState } from "react";
 // import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
 const Dashboard = () => {
-
-  // const navigate = useNavigate();
-  // const [role, setRole] = useState("");
-
-  // useEffect(() => {
-  //   setRole(localStorage.getItem("role"));
-  // }, []);
-
   const [things, setThings] = useState([]);
   const token = localStorage.getItem("token");
 
@@ -91,7 +47,7 @@ const Dashboard = () => {
             />
             <h2 className="text-xl font-bold">{thing.title}</h2>
             <p>{thing.description}</p>
-            <p className="font-semibold text-green-600">{thing.price} $</p>
+            <p className="font-semibold text-green-600">{thing.price}</p>
             
             <Link
               to={`/edit-thing/${thing._id}`}
@@ -117,11 +73,6 @@ const Dashboard = () => {
       >
         Ajouter un objet
       </Link>
-      {/* {role === "admin" && (
-        <button onClick={() => navigate("/create")} className="btn bg-blue-500 text-white p-2 rounded">
-          Ajouter un objet
-        </button>
-      )} */}
       
     </div>
   );
