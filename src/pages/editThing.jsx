@@ -12,9 +12,6 @@ const EditThing = () => {
   useEffect(() => {
     const fetchThing = async () => {
       try {
-        // const response = await axios.get(`http://localhost:3000/api/stuff/${id}`, {
-        //   headers: { Authorization: `Bearer ${token}` },
-        // });
         const response = await axios.get(`http://backende-murex.vercel.app/api/stuff/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
@@ -37,9 +34,6 @@ const EditThing = () => {
     }
 
     try {
-      // await axios.put(`http://localhost:3y000/api/stuff/${id}`, formData, {
-      //   headers: { Authorization: `Bearer ${token}`, "Content-Type": "multipart/form-data" },
-      // });
       await axios.put(`https://backende-murex.vercel.app/api/stuff/${id}`, formData, {
         headers: {
           Authorization: `Bearer ${token}`,
