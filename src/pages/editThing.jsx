@@ -54,7 +54,7 @@ const EditThing = () => {
       <form onSubmit={handleUpdate} className="space-y-4">
         <input type="text" className="input" value={thing.title} onChange={(e) => setThing({ ...thing, title: e.target.value })} required />
         <textarea className="input" value={thing.description} onChange={(e) => setThing({ ...thing, description: e.target.value })} required />
-        <input type="number" className="input" value={thing.price} onChange={(e) => setThing({ ...thing, price: e.target.value })} required />
+        <input type="text" className="input" value={thing.price} onChange={(e) => setThing({ ...thing, price: e.target.value })} required />
         <input type="file" className="input" onChange={(e) => setThing({ ...thing, image: e.target.files[0] })} />
         <button type="submit" className="btn bg-green-500 text-white p-2 rounded">Modifier</button>
       </form>
