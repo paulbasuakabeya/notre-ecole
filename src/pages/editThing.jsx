@@ -51,7 +51,7 @@ const EditThing = () => {
   return (
     <div className="p-6">
       <h1 className="text-2xl font-bold mb-4">Modifier l'objet</h1>
-      <form onSubmit={handleUpdate} className="space-y-4">
+      <form onSubmit={handleUpdate} className="max-w-lg mx-auto p-4 border rounded shadow">
         <input type="text" className="input" value={thing.title} onChange={(e) => setThing({ ...thing, title: e.target.value })} required />
         <textarea className="input" value={thing.description} onChange={(e) => setThing({ ...thing, description: e.target.value })} required />
         <input type="text" className="input" value={thing.price} onChange={(e) => setThing({ ...thing, price: e.target.value })} required />
