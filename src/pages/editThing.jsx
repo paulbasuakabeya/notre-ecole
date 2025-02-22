@@ -52,11 +52,11 @@ const EditThing = () => {
     <div className="p-6">
       <h1 className="text-2xl font-bold mb-4">Modifier l'objet</h1>
       <form onSubmit={handleUpdate} className="max-w-lg mx-auto p-4 border rounded shadow">
-        <input type="text" className="input" value={thing.title} onChange={(e) => setThing({ ...thing, title: e.target.value })} required />
-        <textarea className="input" value={thing.description} onChange={(e) => setThing({ ...thing, description: e.target.value })} required />
-        <input type="text" className="input" value={thing.price} onChange={(e) => setThing({ ...thing, price: e.target.value })} required />
-        <input type="file" className="input" onChange={(e) => setThing({ ...thing, image: e.target.files[0] })} />
-        <button type="submit" className="btn bg-green-500 text-white p-2 rounded">Modifier</button>
+        <input type="text" className="w-full p-2 border rounded my-2" value={thing.title} onChange={(e) => setThing({ ...thing, title: e.target.value })} required />
+        <textarea className="w-full p-2 border rounded my-2" value={thing.description} onChange={(e) => setThing({ ...thing, description: e.target.value })} required />
+        <input type="text" className="w-full p-2 border rounded my-2" value={thing.price} onChange={(e) => setThing({ ...thing, price: e.target.value })} required />
+        <input type="file" className="w-full p-2 border rounded my-2" onChange={(e) => setThing({ ...thing, image: e.target.files[0] })} />
+        <button type="submit" className="w-full bg-green-500 text-white p-2 rounded">Modifier</button>
       </form>
     </div>
   );
