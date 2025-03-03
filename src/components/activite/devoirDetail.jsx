@@ -10,7 +10,7 @@ const DevoirDetail = () => {
   useEffect(() => {
     const fetchThings = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/stuff", {
+        const response = await axios.get("https://backende-murex.vercel.app/api/stuff", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setThings(response.data);
