@@ -24,7 +24,7 @@ const DevoirDetail = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/api/stuff/${id}`, {
+      await axios.delete(`https://backende-murex.vercel.app/api/stuff/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setThings(things.filter((thing) => thing._id !== id));
