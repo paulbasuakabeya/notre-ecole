@@ -13,7 +13,7 @@ const EditThing = () => {
   useEffect(() => {
     const fetchThing = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/stuff/${id}`, {
+        const response = await axios.get(`https://backende-murex.vercel.app/api/stuff/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         const data = response.data;
