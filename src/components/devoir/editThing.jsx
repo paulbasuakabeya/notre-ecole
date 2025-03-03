@@ -39,7 +39,7 @@ const EditThing = () => {
     }
 
     try {
-      await axios.put(`http://localhost:3000/api/stuff/${id}`, formData, {
+      await axios.put(`https://backende-murex.vercel.app/api/stuff/${id}`, formData, {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "multipart/form-data",
