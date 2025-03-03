@@ -26,7 +26,7 @@ const CommunicationDetail = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/api/communications/${id}`, {
+      await axios.delete(`https://backende-murex.vercel.app/api/communications/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
