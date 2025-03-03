@@ -13,7 +13,7 @@ const CommunicationDetail = () => {
   useEffect(() => {
     const fetchCommunications = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/communications`);
+        const response = await axios.get(`https://backende-murex.vercel.app/api/communications`);
         setCommunications(response.data);
       } catch (error) {
         console.error('Erreur de récupération des communications', error);
