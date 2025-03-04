@@ -10,7 +10,7 @@ const DevoirDetail = () => {
   useEffect(() => {
     const fetchThings = async () => {
       try {
-        const response = await axios.get("https://backende-ten.vercel.app//api/stuff", {
+        const response = await axios.get("https://backende-ten.vercel.app/api/stuff", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setThings(response.data);
@@ -24,7 +24,7 @@ const DevoirDetail = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://backende-ten.vercel.app//api/stuff/${id}`, {
+      await axios.delete(`https://backende-ten.vercel.app/api/stuff/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setThings(things.filter((thing) => thing._id !== id));
