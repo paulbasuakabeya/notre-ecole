@@ -26,7 +26,7 @@ const CommunicationDetail = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://backende-ten.vercel.app//apicommunications/${id}`, {
+      await axios.delete(`https://backende-ten.vercel.app/apicommunications/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -42,7 +42,7 @@ const CommunicationDetail = () => {
   }
 
   return (
-    <div className="p-6 bg-customBg min-h-screen flex flex-col justify-center items-center">
+    <div className="p-6 min-h-screen flex flex-col justify-center items-center">
       <h1 className="text-3xl font-bold mb-6 text-center text-white">Liste des communications</h1>
       <ul className="w-full max-w-2xl">
         {communications.map((communication) => (
