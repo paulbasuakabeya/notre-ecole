@@ -14,7 +14,7 @@ const EditCommunication = () => {
   useEffect(() => {
     const fetchCommunication = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/communications/${id}`, {
+        const response = await axios.get(`https://backende-ten.vercel.app/api/communications/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setCommunication(response.data);
@@ -34,7 +34,7 @@ const EditCommunication = () => {
     };
 
     try {
-      await axios.put(`http://localhost:3000/api/communications/${id}`, updatedCommunication, {
+      await axios.put(`https://backende-ten.vercel.app/api/communications/${id}`, updatedCommunication, {
         headers: { Authorization: `Bearer ${token}` },
       });
       navigate("/navbartwo/communications");
