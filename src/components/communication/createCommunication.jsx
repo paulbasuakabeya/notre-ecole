@@ -14,7 +14,7 @@ const CreateCommunication = () => {
     const newCommunication = { titre, message, date };
 
     try {
-      await axios.post(`http://localhost:3000/api/communications`, newCommunication, {
+      await axios.post(`https://backende-ten.vercel.app//api/communications`, newCommunication, {
         headers: { Authorization: `Bearer ${token}` },
       });
       navigate("/communications");
