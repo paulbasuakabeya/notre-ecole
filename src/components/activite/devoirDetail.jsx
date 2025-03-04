@@ -57,7 +57,7 @@ const DevoirDetail = () => {
   };
 
   return (
-    <div className="p-6 bg-customBg min-h-screen">
+    <div className="p-6 min-h-screen">
       <h1 className="text-2xl font-bold mb-4 text-center text-white">Liste de Devoirs</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-1">
         {things.map((thing) => (
