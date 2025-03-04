@@ -37,40 +37,79 @@ const data = [
   }, []);
 
   return (
+
+
     <div
-      className="relative w-full h-screen flex flex-col justify-center items-center text-white text-center px-6"
+      className="relative w-full h-1/2 md:h-screen min-h-[50vh] flex flex-col justify-center items-center text-white text-center px-6 
+                 overflow-hidden max-w-full"
       style={{
         backgroundImage: `url(${data[index].bgImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        transition: "background-image 3s ease-in-out",
+        backgroundRepeat: "no-repeat",
+        transition: "background-image 5s ease-in-out",
+        aspectRatio: "16/9",
       }}
     >
       {/* Overlay pour améliorer la lisibilité du texte */}
       <div className="absolute inset-0 bg-black/25"></div>
 
       {/* Contenu avec animation */}
-      <div className="relative z-10 ">
+      <div className="relative z-10 flex flex-col flex-wrap max-w-full min-h-[50vh] justify-center">
         <h1
           key={data[index].title}
-          className="text-4xl md:text-6xl font-bold mb-4 animate-fade"
+          className="text-[5vh] md:text-6xl font-bold mb-4 animate-fade max-w-full text-ellipsis overflow-hidden"
         >
           {data[index].title}
         </h1>
         <p
           key={data[index].description}
-          className="text-lg md:text-xl max-w-2xl mb-2 animate-slide"
+          className="text-[2.5vh] md:text-xl max-w-2xl mb-2 animate-slide max-w-full text-ellipsis overflow-hidden"
         >
           {data[index].description}
         </p>
         <span
           key={data[index].smallText}
-          className="text-sm md:text-base animate-bounce"
+          className="text-[1.8vh] md:text-base animate-bounce max-w-full text-ellipsis overflow-hidden"
         >
           {data[index].smallText}
         </span>
       </div>
     </div>
+    // <div
+    //   className="relative w-full h-screen flex flex-col justify-center items-center text-white text-center px-6"
+    //   style={{
+    //     backgroundImage: `url(${data[index].bgImage})`,
+    //     backgroundSize: "cover",
+    //     backgroundPosition: "center",
+    //     transition: "background-image 3s ease-in-out",
+    //   }}
+    // >
+    //   {/* Overlay pour améliorer la lisibilité du texte */}
+    //   <div className="absolute inset-0 bg-black/25"></div>
+
+    //   {/* Contenu avec animation */}
+    //   <div className="relative z-10 ">
+    //     <h1
+    //       key={data[index].title}
+    //       className="text-4xl md:text-6xl font-bold mb-4 animate-fade"
+    //     >
+    //       {data[index].title}
+    //     </h1>
+    //     <p
+    //       key={data[index].description}
+    //       className="text-lg md:text-xl max-w-2xl mb-2 animate-slide"
+    //     >
+    //       {data[index].description}
+    //     </p>
+    //     <span
+    //       key={data[index].smallText}
+    //       className="text-sm md:text-base animate-bounce"
+    //     >
+    //       {data[index].smallText}
+    //     </span>
+    //   </div>
+    // </div>
   );
 }
 export default SchoolPresentation;
