@@ -57,7 +57,7 @@ const AddThing = () => {
         placeholder="Description" 
         value={description} 
         onChange={(e) => setDescription(e.target.value)} 
-        className="w-full p-2 border rounded my-2" 
+         className="w-full h-32 md:h-40 p-2 border rounded my-2 resize-none overflow-y-auto focus:ring-2 focus:ring-blue-500 focus:outline-none" 
         required 
       />
       <input 
