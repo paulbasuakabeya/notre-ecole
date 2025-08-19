@@ -13,7 +13,7 @@ const CommunicationList = () => {
   useEffect(() => {
     const fetchCommunications = async () => {
       try {
-        const response = await axios.get(`https://backende-ten.vercel.app/api/communications`);
+        const response = await axios.get(`https://revisionbackend-j857.onrender.com/api/communications`);
         setCommunications(response.data);
       } catch (error) {
         console.error('Erreur de récupération des communications', error);
@@ -26,7 +26,7 @@ const CommunicationList = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://backende-ten.vercel.app/api/communications/${id}`, {
+      await axios.delete(`https://revisionbackend-j857.onrender.com/api/communications/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
