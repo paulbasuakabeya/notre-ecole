@@ -1,6 +1,6 @@
 {
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "https://backende-ten.vercel.app//api/stuff" },
+    { "source": "/api/(.*)", "destination": "https://revisionbackend-j857.onrender.com/api/stuff" },
     { "source": "/(.*)", "destination": "/" }
   ]
 }

@@ -12,7 +12,7 @@ const DevoirDetail = () => {
   useEffect(() => {
     const fetchThings = async () => {
       try {
-        const response = await axios.get("https://backende-ten.vercel.app/api/stuff", {
+        const response = await axios.get("https://revisionbackend-j857.onrender.com/api/stuff", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setThings(response.data);
