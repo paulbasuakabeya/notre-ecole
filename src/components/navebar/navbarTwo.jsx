@@ -45,7 +45,7 @@ const Navbartwo = () => {
           <Link to="/navbartwo/dashboard" className="block px-4 py-2 rounded hover:bg-gray-200 transition">📚 Devoir</Link>
           <Link to="/navbartwo/communications" className="block px-4 py-2 rounded hover:bg-gray-200 transition">📢 Communications</Link>
           <Link to="/login" className="block px-4 py-2 rounded hover:bg-gray-200 transition">Connexion</Link>
-          <Link to="/signup" className="block px-4 py-2 rounded hover:bg-gray-200 transition">Inscription</Link>
+          <Link to="/navbartwo/signup" className="block px-4 py-2 rounded hover:bg-gray-200 transition">Inscription</Link>
         </div>
       )}
     </nav>
