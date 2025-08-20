@@ -10,7 +10,8 @@ import Propos from "./pages/propos";
 import DevCcommunique from "./pages/devCommunique";
 // backend
 import Home from "./components/devoir/home";
-import Login from "./components/devoir/login";
+// import Login from "./components/devoir/login";
+import Login  from "./components/auth/login"
 import Signup from "./components/devoir/signup";
 import Dashboard from "./components/devoir/dashboard";
 import Navbartwo from "./components/navebar/navbarTwo";
@@ -19,7 +20,9 @@ import EditCommunication from "./components/communication/editCommunication";
 import CreateCommunication from "./components/communication/createCommunication";
 import EditThing from "./components/devoir/editThing";
 import AddThing from "./components/devoir/addThing";
+import AgentDashboard from "./components/auth/agentDashbord";
 import EntreDashboard from "./components/communication/entreDashboard";
+import AdminDashboard from "./components/auth/adminDashboard";
 import './App.css';
 
 // Layout principal
@@ -60,6 +63,8 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="activites" element={<Activite />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="user-dashboard" element={<EntreDashboard />} />
+          <Route path="agent-dashboard" element={<AgentDashboard />} />
           <Route path="cycles-organises" element={<CycleOrganise />} />
           <Route path="*" element={<NoMatch />} />
           <Route path="devoir-communique" element={<DevCcommunique />} />
@@ -67,12 +72,13 @@ function App() {
 
         {/* Routes imbriquées sous Navbartwo */}
         <Route path="/navbartwo" element={<NavbartwoLayout />}>
-          <Route index element={<EntreDashboard/>} />
+          <Route index element={<AdminDashboard/>} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="communications" element={<CommunicationList />} />
           <Route path="edit-communication/:id" element={<EditCommunication />} />
           <Route path="create-communication" element={<CreateCommunication />} />
           <Route path="signup" element={<Signup />} />
+
           <Route path="edit-thing/:id" element={<EditThing />} />
           <Route path="add-thing" element={<AddThing />} />
         </Route>
