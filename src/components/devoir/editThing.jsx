@@ -13,7 +13,7 @@ const EditThing = () => {
   useEffect(() => {
     const fetchThing = async () => {
       try {
-        const response = await axios.get(`https://revisionbackend-j857.onrender.com/api/stuff/${id}`, {
+        const response = await axios.get(`https://revisionbackend.vercel.app/api/stuff/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         const data = response.data;
@@ -39,7 +39,7 @@ const EditThing = () => {
     }
 
     try {
-      await axios.put(`https://revisionbackend-j857.onrender.com/api/stuff/${id}`, formData, {
+      await axios.put(`https://revisionbackend.vercel.app/api/stuff/${id}`, formData, {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "multipart/form-data",

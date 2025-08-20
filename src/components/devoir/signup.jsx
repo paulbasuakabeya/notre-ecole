@@ -10,7 +10,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://revisionbackend-j857.onrender.com/api/auth/signup", { email, password });
+      await axios.post("https://revisionbackend.vercel.app/api/auth/signup", { email, password });
       navigate("/login"); 
     } catch (error) {
       console.error("Erreur lors de l'inscription", error);

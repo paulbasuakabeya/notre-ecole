@@ -13,7 +13,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchThings = async () => {
       try {
-        const response = await axios.get("https://revisionbackend-j857.onrender.com/api/stuff", {
+        const response = await axios.get("https://revisionbackend.vercel.app/api/stuff", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setThings(response.data);
@@ -27,7 +27,7 @@ const Dashboard = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://revisionbackend-j857.onrender.com/api/stuff/${id}`, {
+      await axios.delete(`https://revisionbackend.vercel.app/api/stuff/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setThings(things.filter((thing) => thing._id !== id));

@@ -14,7 +14,7 @@ const EditCommunication = () => {
   useEffect(() => {
     const fetchCommunication = async () => {
       try {
-        const response = await axios.get(`https://revisionbackend-j857.onrender.com/api/communications/${id}`, {
+        const response = await axios.get(`https://revisionbackend.vercel.app/api/communications/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setCommunication(response.data);
@@ -34,7 +34,7 @@ const EditCommunication = () => {
     };
 
     try {
-      await axios.put(`https://revisionbackend-j857.onrender.com/api/communications/${id}`, updatedCommunication, {
+      await axios.put(`https://revisionbackend.vercel.app/api/communications/${id}`, updatedCommunication, {
         headers: { Authorization: `Bearer ${token}` },
       });
       navigate("/navbartwo/communications");

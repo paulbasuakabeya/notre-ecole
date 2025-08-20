@@ -23,7 +23,7 @@ const AddThing = () => {
     formData.append("image", image);
 
     try {
-      await axios.post("https://revisionbackend-j857.onrender.com/api/stuff", formData, {
+      await axios.post("https://revisionbackend.vercel.app/api/stuff", formData, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
       navigate("/dashboard");
