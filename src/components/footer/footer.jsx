@@ -1,6 +1,6 @@
 import logo from '../../assets/images/logo-ecole.jpg'
 
-import { FaFacebook, FaWhatsapp, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaWhatsapp, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -40,11 +40,14 @@ export default function Footer() {
               <a href="#" className="flex items-center space-x-2 hover:text-blue-600">
                 <FaTwitter /> <span>Twitter</span>
               </a>
-              <a href="#" className="flex items-center space-x-2 hover:text-green-500">
+              <a href=" https://chat.whatsapp.com/IpcsYZfxiu1B8dCVVjmrGv?mode=ac_t" className="flex items-center space-x-2 hover:text-green-500">
                 <FaWhatsapp /> <span>WhatsApp</span>
               </a>
               <a href="#" className="flex items-center space-x-2 hover:text-pink-500">
                 <FaInstagram /> <span>Instagram</span>
+              </a>
+              <a href="https://www.youtube.com/results?search_query=lestonnac+mobokoli"  target="_blank"   rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-red-600">
+                <FaYoutube /> <span>YouTube</span>
               </a>
             </div>
           </div>
