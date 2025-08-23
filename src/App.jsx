@@ -23,6 +23,7 @@ import AddThing from "./components/devoir/addThing";
 import AgentDashboard from "./components/auth/agentDashbord";
 import EntreDashboard from "./components/communication/entreDashboard";
 import AdminDashboard from "./components/auth/adminDashboard";
+import SendEmail from './components/auth/sendEmail'
 import './App.css';
 
 // Layout principal
@@ -78,7 +79,7 @@ function App() {
           <Route path="edit-communication/:id" element={<EditCommunication />} />
           <Route path="create-communication" element={<CreateCommunication />} />
           <Route path="signup" element={<Signup />} />
-
+          <Route path="send-email" element={<SendEmail />} />
           <Route path="edit-thing/:id" element={<EditThing />} />
           <Route path="add-thing" element={<AddThing />} />
         </Route>
