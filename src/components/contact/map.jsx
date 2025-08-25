@@ -1,17 +1,9 @@
 import React from 'react';
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+
 
 const MapComponent
  = () => {
-  const containerStyle = {
-    width: '100%',
-    height: '400px',  // Taille de la carte
-  };
-
-  const center = {
-    lat: -4.43643,  // Latitude pour Bypass Bel'air, Kinshasa
-    lng: 15.27793,  // Longitude pour Bypass Bel'air, Kinshasa
-  };
+  
 
   return (
     <div className="w-full px-4 md:px-0 py-0 bg-gray-100">
